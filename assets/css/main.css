@@ -4860,9 +4860,30 @@ input, select, textarea {
 		animation: rotateCCW calc(var(--rotate-speed) * 1s) var(--easing) infinite;
 	}
 	@media screen and (max-width: 768px) {
-	  .void .card {
-	    width: 100%;
-	  }
+	.void ul {
+	  position: static; /* Remove absolute positioning for the list on smaller screens */
+	}
+  
+	.void li {
+	  position: relative; /* Change position to relative for each list item on smaller screens */
+	  width: 100%; /* Full width for each list item on smaller screens */
+	}
+  
+	.void .card {
+	  width: 100%; /* Full width for each card on smaller screens */
+	}
+	.void .center-circle,
+	.void .second-circle,
+	.void .last-circle {
+  		display: none; /* Hide the circles for larger screens */
+}	
+.void .crop {
+    -webkit-mask-image: none; /* Remove the mask for smaller screens */
+  }
+.void .mask {
+	display: none; /* Hide the mask for larger screens */
+  }
+  }
 
 	a {
 		text-decoration: none;
