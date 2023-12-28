@@ -4859,6 +4859,11 @@ input, select, textarea {
 		color: #535062;
 		animation: rotateCCW calc(var(--rotate-speed) * 1s) var(--easing) infinite;
 	}
+	@media screen and (max-width: 768px) {
+	  .void .card {
+	    width: 100%;
+	  }
+
 	a {
 		text-decoration: none;
 		font-family: "Merriweather", Georgia, serif;
